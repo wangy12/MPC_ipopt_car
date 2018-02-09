@@ -27,7 +27,7 @@ const double dt = 0.1;
 const double Lf = 2.67;
 
 // The reference velocity 
-const double ref_v = 77;
+const double ref_v = 76.0;
 
 const int nb_states =  6; // number of state 
 const int nb_actuations = 2; // actuation variables
@@ -42,13 +42,13 @@ const int delta_start = epsi_start + N;
 const int a_start = delta_start + N - 1;
 
 // weights for cost function
-const double W_cte = 8.4;//2000.0;
-const double W_epsi = 0.32;//2000.0;
-const double W_v = 0.261;//1.0;
-const double W_delta = 600000;//5.0;
-const double W_a = 17.1;//5.0;
-const double W_ddelta = 0.01;//200.0; // weight for high difference between consecutive steering actuations
-const double W_da = 0.00001;//10.0; // weight for high difference between consecutive acceleration actuations
+const double W_cte = 20.0;
+const double W_epsi = 20.0;
+const double W_v = 0.01;
+const double W_delta = 0.05;
+const double W_a = 0.05;
+const double W_ddelta = 2.0; // weight for high difference between consecutive steering actuations
+const double W_da = 0.1; // weight for high difference between consecutive acceleration actuations
 
 class MPC {
  public:
